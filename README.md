@@ -17,4 +17,4 @@
 
 ### 视觉效果
 楼盘分布页面demo预览
-![](pic\premiseDistribution.png)
+![](https://github.com/SunnySunMoon/premisesVisual/blob/master/pic/premiseDistribution.png)
