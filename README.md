@@ -9,4 +9,12 @@
 
 库与框架：JQuery, Bootstrap, Echarts
 
-其它： 百度地图API 
+其它： 百度地图API
+
+### 运行环境
+
+数据使用了ajax进行异步加载，因此需要一个服务器环境，例如Tomcat，Apache或Node.js等，通过localhost查看效果。 
+
+### 视觉效果
+楼盘分布页面demo预览
+![](pic\premiseDistribution.png)
