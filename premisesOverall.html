@@ -11,12 +11,13 @@
     <script type="text/javascript" src="lib/bootstrap.min.js"></script>
     <script type="text/javascript" src="lib/echarts.min.js"></script>
     <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=uiFvDcf8kGFFjTj2itxyygxbyPaQbr0E"></script>
-    <script type="text/javascript" src="http://data-visual.cn/datav/src/js/echarts/extension/bmap.min.js"></script>
+    <script type="text/javascript" src="lib/bootstrap-table.min.js"></script>
     <script src="lib/bmap.js"></script>
 
     <script type="text/javascript" src="data\mapConfig.js"></script>
 
     <link href="lib/bootstrap.css" rel="stylesheet">
+    <link href="lib/bootstrap-table.css" rel="stylesheet">
     <link href="css\premisesOverall.css" rel="stylesheet">
 </head>
 
@@ -109,14 +110,14 @@
             <!--展示区-->
             <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
                 <h1 class="page-header"></h1>
-                <div id="mapBox">
-                    <div id="main" style="width:1200px; height:600px;"></div>
+                <div id="contentBox">
                 </div>
 		    </div>
         </div>
     </div>
 </body>
 <script>
-    var premisesAll = [];
+    var premisesAll = [],paramData = []; //保存楼盘节点信息、tooltip信息
 </script>
 <script type="text/javascript" src="js\premisesOverall.js"></script>
+<script type="text/javascript" src="js\premisesList.js"></script>
