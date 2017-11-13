@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">  
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>房地产可视化</title>
+    <link rel='shortcut icon' href='pic/premise_favicon.ico'>
     <script type="text/javascript" src="lib/jquery-3.2.0.min.js"></script>
     <script type="text/javascript" src="lib/bootstrap.min.js"></script>
     <script type="text/javascript" src="lib/echarts.min.js"></script>
     <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=uiFvDcf8kGFFjTj2itxyygxbyPaQbr0E"></script>
+    <script type="text/javascript" src="http://data-visual.cn/datav/src/js/echarts/extension/bmap.min.js"></script>
     <script src="lib/bmap.js"></script>
 
     <script type="text/javascript" src="data\mapConfig.js"></script>
@@ -106,7 +108,7 @@
             </div>
             <!--展示区-->
             <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-                <h1 class="page-header">楼盘分布</h1>
+                <h1 class="page-header"></h1>
                 <div id="mapBox">
                     <div id="main" style="width:1200px; height:600px;"></div>
                 </div>
@@ -114,5 +116,7 @@
         </div>
     </div>
 </body>
-
+<script>
+    var premisesAll = [];
+</script>
 <script type="text/javascript" src="js\premisesOverall.js"></script>
