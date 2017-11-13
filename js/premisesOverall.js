@@ -1,8 +1,10 @@
 
-var premisesAll = [] , paramData = []
+let paramData = [];
+$("#main").empty();
+$(".page-header").html("楼盘分布");
 
 //初始化地图背景及散点图数据以外的配置
-var myChart = echarts.init(document.getElementById('main'));
+let myChart = echarts.init(document.getElementById('main'));
 option = {
     title: {
         text: 'G市楼盘概览 - 百度地图',
@@ -22,6 +24,7 @@ option = {
             name: 'premisesAll',
             type: 'scatter',
             coordinateSystem: 'bmap',
+            zlevel:2,
             data: [],
             label: {
                 normal: {
@@ -93,7 +96,7 @@ $.ajax({
                             + "特色: " + res.value[4] + "</br>"
                             + "均价: " + res.value[5] + "元/平米</br>"
                             + "评分: " + res.value[2] 
-                        }
+                        },
                 },
                 series : [
                     {
@@ -114,5 +117,7 @@ $.ajax({
         alert(XMLHttpRequest.readyState);
         alert(textStatus);
     }
-})
+});
+
+
     
