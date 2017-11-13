@@ -38,7 +38,7 @@ body{
     cursor: pointer;
 }
 
-#mapBox{
+#contentBox{
     width:1210px;
     padding:5px;
     background-color: #BFBFBF;
