@@ -18,3 +18,6 @@
 ### 视觉效果
 楼盘分布页面demo预览
 ![](https://github.com/SunnySunMoon/premisesVisual/blob/master/pic/premiseDistribution.png)
+
+楼盘列表页面demo预览
+![](https://github.com/SunnySunMoon/premisesVisual/blob/master/pic/premiseList.png)
