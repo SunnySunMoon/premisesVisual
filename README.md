@@ -21,3 +21,6 @@
 
 楼盘列表页面demo预览
 ![](https://github.com/SunnySunMoon/premisesVisual/blob/master/pic/premiseList.png)
+
+POI分布页面demo预览
+![](https://github.com/SunnySunMoon/premisesVisual/blob/master/pic/poiDistribution.png)
