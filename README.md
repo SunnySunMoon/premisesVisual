@@ -24,3 +24,7 @@
 
 POI分布页面demo预览
 ![](https://github.com/SunnySunMoon/premisesVisual/blob/master/pic/poiDistribution.png)
+
+数据统计页面预览图
+![](pic/statistics1.png)
+![](pic/statistics2.png)
