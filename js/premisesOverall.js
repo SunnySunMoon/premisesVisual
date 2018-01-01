@@ -65,9 +65,9 @@ function viewPremisesOverall(){
                         lon: Number(data[i].lon),
                         averagePrice: data[i].均价,
                         volumeRate: data[i].容积率,
-                        greeningRate: data[i].绿化率,
+                        greeningRate: Number(data[i].绿化率),
                         grade: Number(data[i].评分),
-                        commentNumber: data[i].评论数,
+                        commentNumber: Number(data[i].评论数),
                         areaCovered: data[i].小区占地面积,
                         builtupArea: data[i].小区建筑面积,
                         propertyFee: data[i].物业费,
@@ -114,7 +114,6 @@ function viewPremisesOverall(){
                     
                 ]
             });
-            console.log(paramData)
         },
         error: function(XMLHttpRequest, textStatus, errorThrown) {
             alert(XMLHttpRequest.status);
