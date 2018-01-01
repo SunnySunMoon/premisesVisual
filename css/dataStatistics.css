@@ -1,0 +1,40 @@
+/*选择栏*/
+.tab-content{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.btn-group{
+    display: none;
+    margin-left: 10px;
+}
+
+/*下拉框*/
+hr{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.nameCard{
+    margin: 3px;
+    display: inline-block;
+    width: 180px;
+    height: 24px;
+    line-height: 24px;
+    padding-left: 10px;
+}
+.nameCard:hover {
+    background-color: #f5f5f5;
+    cursor: pointer;
+}
+.initChar{
+    margin: 2px;
+}
+#pMenu{
+    width: 1000px;
+}
+#dateSelection{
+    margin-left: 5px;
+}
+#submitDate{
+    margin-left: 5px;
+    margin-right: 5px;
+}
