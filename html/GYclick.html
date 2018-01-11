@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>数据统计</title>
+    <link rel='shortcut icon' href='../pic/premise_favicon.ico'>
+    <script type="text/javascript" src="../lib/jquery-3.2.0.min.js"></script>
+    <script type="text/javascript" src="../lib/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../lib/echarts.min.js"></script>
+
+    <link href="../lib/bootstrap.css" rel="stylesheet">
+    <link href="../css/premisesOverall.css" rel="stylesheet">
+    <link href="../css/dataStatistics.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <a class="navbar-brand" href="#">贵阳市房地产可视化</a>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <!--侧边栏-->
+            <div class="col-sm-3 col-md-2 sidebar">
+                <div class="panel-group" id="accordion">
+                    <!--楼盘概览-->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" 
+                                    href="#premisesOverall">
+                                    楼盘概览
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="premisesOverall" class="panel-collapse collapse">
+                            <div class="panel-body" id="overallGraph">
+                                楼盘分布
+                            </div>
+                            <div class="panel-body" id="overallList">
+                                楼盘列表
+                            </div>
+                        </div>
+                    </div>
+                    <!--区域属性-->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" 
+                                    href="#areaAttributes">
+                                    区域属性
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="areaAttributes" class="panel-collapse collapse">
+                            <div class="panel-body" id="poiDistribution">
+                                POI分布
+                            </div>
+                            <!-- <div class="panel-body" id="entropyDistribution">
+                                多样性熵分布
+                            </div> -->
+                            <div class="panel-body" id="attributesDistribution">
+                                楼盘属性分布
+                            </div>
+                        </div>
+                    </div>
+                    <!--居民区域分析-->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" 
+                                    href="#TdataView">
+                                    行业数据综览 
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="TdataView" class="panel-collapse collapse">
+                            <div class="panel-body" id="dayData">
+                                <a href="dataStatistics.html">数据统计</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--网络点击统计-->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle='collapse' data-parent="#accordion" href="#netClick">
+                                    网络点击统计
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="netClick" class="panel-collapse collapse in">
+                            <div class="panel-body" id="clickStatistics">
+                                <a href="#">贵阳点击统计</a> 
+                            </div>
+                            <div class="panel-body" id="cityBClick">
+                                北京点击分布
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--展示区-->
+            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                <h1 class="page-header">G市点击量统计</h1>
+                <!--Tab标签-->
+                <ul class="nav nav-tabs" id="tab-list">
+                    <li class="active">
+                        <a href="#Premise" data-toggle="tab">
+                            楼盘月度数据
+                        </a>  
+                    </li>
+                    <li>
+                        <a href="#Top10" data-toggle="tab">
+                            每日Top10统计
+                        </a>
+                    </li>
+                </ul>
+                <!--Tab标签对应的内容区域-->
+                <div class="tab-content">
+                    <!--楼盘月度数据标签内容-->
+                    <div class="tab-pane fade in active" id="Premise">
+                        <div class="dropdown">
+                            <button type="button" class="btn btn-primary dropdown-toggle"
+                            data-toggle="dropdown">
+                                选择楼盘<span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" id="pMenu">
+                                <!--js操作DOM填充具体内容-->
+                            </ul>
+                        </div>
+                        <div class="canvasBox" id="foldLine" style="width:1200px; height:400px;">
+                            <!--echarts自动生成canvas标签-->
+                        </div>
+                    </div>
+                    <!--每日Top10标签内容-->
+                    <div class="tab-pane fade" id="Top10">
+                        <div class="dropdown">
+                            <button type="button" class="btn btn-primary dropdown-toggle"
+                            data-toggle="dropdown" id="selectD">
+                                选择日期<span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" id="pTop10">
+                                <!--html5自带时间选择控件-->
+                                <input type="date" id="dateSelection" />
+                                <button class="btn" id='submitDate'>确定</button>
+                            </ul>
+                        </div>
+                        <div class="canvasBox" id="bar" style="width:1200px; height:500px;">
+                            <!--echarts自动生成canvas标签-->
+                        </div>
+                    </div>
+                </div>
+		    </div>
+        </div>
+    </div>
+</body>
+<!--数据-->
+<script src="../data/clickData.js" type="text/javascript"></script>
+<!--汉语拼音首字母对应编码表-->
+<script src="../js/ChineseAlphabet.js" type="text/javascript"></script>
+<!--页面脚本-->
+<script src="../js/GYclick.js" type="text/javascript"></script>
