@@ -28,3 +28,6 @@ POI分布页面demo预览
 数据统计页面预览图
 ![](pic/statistics1.png)
 ![](pic/statistics2.png)
+
+贵阳市点击统计页面预览图
+![](pic/cityGuiyangClick.png)

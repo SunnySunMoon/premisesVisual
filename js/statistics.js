@@ -14,22 +14,6 @@ for(let i=0; i<dataStatistics.length; i++){
     }
 }
 
-//返回值:拼音首字母串数组  
-function makePy(str) {
-    var arrResult = new Array(); //保存中间结果的数组  
-    for(let i=0; i<str.length; i++){
-        //获得unicode码  
-        var charUnicode = str.charCodeAt(i);
-        //检查该unicode码是否在处理范围之内,在则返回该码对映汉字的拼音首字母,不在则调用其它函数处理  
-        if(charUnicode > 40869 || charUnicode < 19968){
-            //do nothing
-        }
-        arrResult.push(strChineseFirstPY.charAt(charUnicode - 19968));
-    }
-    //处理arrResult,返回所有可能的拼音首字母串数组  
-    return arrResult.join("");
-}
-
 //按首字母从小到大排序楼盘名称数组
 for(let i=0; i<premiseName.length; i++){
     for(let j=i+1; j<premiseName.length; j++){
@@ -112,7 +96,7 @@ function drawFoldLine(namePara){
         },
         xAxis: {
             type: 'category',
-            houndaryGap: false,
+            boundaryGap: false,
             data: dataObject.date
         },
         yAxis: {
