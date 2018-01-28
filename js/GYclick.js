@@ -229,7 +229,7 @@
             xAxis: {
                 type: 'value',
                 axisLabel: {
-                    formatter: '{value} 次'
+                    formatter: '{value} 次' 
                 }
             },
             yAxis: {

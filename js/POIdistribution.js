@@ -9,10 +9,10 @@ $("#overallGraph").click(function(){
 
 $("#poiDistribution").click(function(){
     viewPOIdistribution();
-})
+});
 
 var premisesAllSeriesConfig = {
-    name: 'premisesAll',
+    name: '楼盘',
     type: 'scatter',
     coordinateSystem: 'bmap',
     zlevel:3,
@@ -58,7 +58,7 @@ function viewPOIdistribution(){
     a.appendTo("#contentBox");
     //初始化地图
     let myChart = echarts.init(document.getElementById('main'));
-    option = {
+    let option = {
         title: {
             text: 'G市楼盘概览 - 百度地图',
             subtext: '大小按评分高低分布',
@@ -178,6 +178,10 @@ function viewPOIdistribution(){
                 text: 'G市'+ title +'POI热力图',
                 left: 'center'
             },
+            legend:{
+                data:['楼盘'],
+                left:'left'
+            },        
             visualMap:{
                 type: 'piecewise',
                 seriesIndex: 0,
