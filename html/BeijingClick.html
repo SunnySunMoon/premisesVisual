@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">  
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>北京市点击统计</title>
+        <link rel='shortcut icon' href='../pic/premise_favicon.ico'>
+        <script type="text/javascript" src="../lib/jquery-3.2.0.min.js"></script>
+        <script type="text/javascript" src="../lib/bootstrap.min.js"></script>
+        <script type="text/javascript" src="../lib/echarts.js"></script>
+
+        <link href="../lib/bootstrap.css" rel="stylesheet">
+        <link href="../css/premisesOverall.css" rel="stylesheet">
+        <link href="../css/dataStatistics.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <a class="navbar-brand" href="#">贵阳市房地产可视化</a>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <!--侧边栏-->
+                <div class="col-sm-3 col-md-2 sidebar">
+                    <div class="panel-group" id="accordion">
+                        <!--楼盘概览-->
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" 
+                                        href="#premisesOverall">
+                                        楼盘概览
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="premisesOverall" class="panel-collapse collapse">
+                                <div class="panel-body" id="overallGraph">
+                                    楼盘分布
+                                </div>
+                                <div class="panel-body" id="overallList">
+                                    楼盘列表
+                                </div>
+                            </div>
+                        </div>
+                        <!--区域属性-->
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" 
+                                        href="#areaAttributes">
+                                        区域属性
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="areaAttributes" class="panel-collapse collapse">
+                                <div class="panel-body" id="poiDistribution">
+                                    POI分布
+                                </div>
+                                <!-- <div class="panel-body" id="entropyDistribution">
+                                    多样性熵分布
+                                </div> -->
+                                <div class="panel-body" id="attributesDistribution">
+                                    楼盘属性分布
+                                </div>
+                            </div>
+                        </div>
+                        <!--居民区域分析-->
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" 
+                                        href="#TdataView">
+                                        行业数据综览 
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="TdataView" class="panel-collapse collapse">
+                                <div class="panel-body" id="dayData">
+                                    <a href="dataStatistics.html">数据统计</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--网络点击统计-->
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle='collapse' data-parent="#accordion" href="#netClick">
+                                        网络点击统计
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="netClick" class="panel-collapse collapse in">
+                                <div class="panel-body" id="clickStatistics">
+                                    <a href="GYclick.html">贵阳点击统计</a> 
+                                </div>
+                                <div class="panel-body" id="cityBClick">
+                                    <a href="#">北京点击分布</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--展示区-->
+                <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                    <h1 class="page-header">北京市点击量统计</h1>
+                    <div id="myCanvas"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <script src="../data/clickData.js"></script>
+    <script src="../js/BeijingClick.js"></script>
+
+</html>
